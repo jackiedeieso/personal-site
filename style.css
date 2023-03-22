@@ -51,14 +51,14 @@ nav .main-menu li a:hover {
   transition: 0.4s;
 }
 
-nav .main-menu .open-menu {
+nav .open-menu {
   font-size: 2rem;
   margin: 20px;
   display: none;
   cursor: pointer;
 }
 
-nav .main-menu .close-menu, .icons i {
+nav .close-menu, .icons i {
   font-size: 2rem;
   display: none;
   cursor: pointer;
@@ -82,7 +82,7 @@ nav .main-menu .close-menu, .icons i {
   color: crimson; 
 }
 
-@media(max-width : 800px) {
+@media(max-width: 800px) {
   nav .main-menu {
     height: 100vh;
     top: 0;
@@ -93,8 +93,13 @@ nav .main-menu .close-menu, .icons i {
     justify-content: center;
     align-items: center;
     background: hotpink;
-    transition top 1s ease;
+    transition: top 1s ease;
     display: none;
+  }
+
+  nav .open-menu {
+    display: block;
+    color: whitesmoke;
   }
 
   nav .main-menu .close-menu {
@@ -102,22 +107,18 @@ nav .main-menu .close-menu, .icons i {
     position: absolute;
     top: 20px;
     right: 20px;
-  }
-
-  nav .main-menu .open-menu {
-    display: block;
+    color: whitesmoke;
   }
 
   nav .main-menu li a:hover {
     background: none;
-    color: crimson;
+    color: hotpink; 
     font-size: 1.6rem;
   }
 
   .icons i {
     display: inline-block;
     padding: 12px;
+    color: whitesmoke;
   }
-
-
 } 
