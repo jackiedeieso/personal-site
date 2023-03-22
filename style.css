@@ -15,54 +15,109 @@ h1 {
   cursor: pointer;
 }
 
-. {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+.logo {
+  color: whitesmoke;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 550;
 }
 
 nav {
-  display: flex;
-  justify-content: space-around;
+  display: flex; 
+  justify-content: space-around; 
   align-items: center;
   min-height: 8vh;
   background-color: #545B9A;
 }
 
-.logo {
-  color: whitesmoke;
-  font-size: 30px;
-}
-
-.nav-links {
+nav .main-menu {
   display: flex;
-  background-color: #545B9A;
-  justify-content: space-around;
-  width: 40%;
-}
-
- .nav-links li {
   list-style: none;
- }
-
-.nav-links a{ 
-  color: whitesmoke;
-  text-decoration: none;
- }
-
- .menu div{
-  width: 25px;
-  height: 3px;
-  margin: 5px;
-  background-color: whitesmoke;
- }
-
- #bar1, #bar2, #bar3 {
-  transition: 0.4s;
- }
-
-.highlight {
-  fill: hotpink;
 }
 
+nav .main-menu li a {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: whitesmoke;
+  font-size: 1.5rem;
+}
 
+nav .main-menu li a:hover {
+  background: rgb(183, 103, 103);
+  opacity: 75%;
+  transition: 0.4s;
+}
+
+nav .main-menu .open-menu {
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+nav .main-menu .close-menu, .icons i {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.fa-linkedin:hover {
+  color: crimson;
+}
+
+.fa-instagram:hover {
+  color: crimson;
+}
+
+.fa-github:hover {
+  color: crimson; 
+}
+
+@media(max-width : 800px) {
+  nav .main-menu {
+    height: 100vh;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: hotpink;
+    transition top 1s ease;
+    display: none;
+  }
+
+  nav .main-menu .close-menu {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  nav .main-menu .open-menu {
+    display: block;
+  }
+
+  nav .main-menu li a:hover {
+    background: none;
+    color: crimson;
+    font-size: 1.6rem;
+  }
+
+  .icons i {
+    display: inline-block;
+    padding: 12px;
+  }
+
+
+} 

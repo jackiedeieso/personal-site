@@ -1,12 +1,7 @@
-// highlights menu icon on hover
-function mouseOver() {
-	this.classList.add("highlight");
-}
+const mainMenu = document.querySelector('.main-menu');
+const closeMenu = document.querySelector('.close-menu');
+const openMenu = document.querySelector('.open-menu');
 
-// unhighlight point on mouse out 
-function mouseOut() {
-	this.classList.remove("highlight");
-}
 
-document.getElementsByTagName("menu").addEventListener('mouseover', mouseOver);
-document.getElementsByTagName("menu").addEventListener('mouseout', mouseOut);
+openMenu.addEventListener('click', show);
+closeMenu.addEventListener('click', close);
