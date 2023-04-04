@@ -2,12 +2,19 @@ body {
   font-family: Courier New;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
 .center {
   text-align: center;
 }
 
 h1 {
   padding: 40px;
+  color: rgb(136, 109, 146)
 }
 
 .container {
@@ -17,21 +24,26 @@ h1 {
 
 .logo {
   color: whitesmoke;
-  font-size: 30px;
+  font-size: 35px;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-weight: 550;
 }
 
 nav {
-  display: flex; 
-  justify-content: space-around; 
+  display: flex;
+  justify-content: space-around;
   align-items: center;
   min-height: 8vh;
-  background-color: #545B9A;
+  height: 100px;
+  background-color: rgb(136, 109, 146);
 }
 
-nav .main-menu {
+nav .menu-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav .main-menu { 
   display: flex;
   list-style: none;
 }
@@ -43,46 +55,80 @@ nav .main-menu li a {
   text-transform: uppercase;
   color: whitesmoke;
   font-size: 1.5rem;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s; 
 }
 
 nav .main-menu li a:hover {
-  background: rgb(183, 103, 103);
+  background-color: rgb(197, 190, 210);
   opacity: 75%;
-  transition: 0.4s;
 }
 
-nav .open-menu {
-  font-size: 2rem;
-  margin: 20px;
-  display: none;
+nav .burger {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  border-color: whitesmoke;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s; 
 }
 
-nav .close-menu, .icons i {
-  font-size: 2rem;
+nav .burger span {
+  position: absolute;
+  transition: 0.5s;
+  width: 27px;
+  height: 3px;
+  box-shadow: 0 -.5px 0 rgb(136, 109, 146);
+  background: rgb(136, 109, 146);
+  border-radius: 4px;
+}
+
+nav .burger span:nth-child(1) {
+  transform: translateY(-9px);
+}
+
+nav .burger span:nth-child(2) {
+  transform: translateY(9px);
+}
+
+nav .burger:hover {
+  box-shadow: 5px 5px 5px rgb(99, 99, 161);
+}
+
+nav .icons {
   display: none;
-  cursor: pointer;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 .fa-linkedin:hover {
-  color: crimson;
+  color: rgb(212, 164, 184);
+  opacity: 80%;
 }
 
 .fa-instagram:hover {
-  color: crimson;
+  color: rgb(212, 164, 184);
+  opacity: 80%; 
 }
 
 .fa-github:hover {
-  color: crimson; 
+  color: rgb(212, 164, 184);
+  opacity: 80%;
 }
 
-@media(max-width: 800px) {
+.fa-github, .fa-linkedin, .fa-instagram {
+  display: none;
+  color: whitesmoke;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.3s; 
+  cursor: pointer;
+}
+
+/* for making the tab smaller */
+@media(max-width: 900px) {
   nav .main-menu {
     height: 100vh;
     top: 0;
@@ -92,33 +138,32 @@ nav .close-menu, .icons i {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: hotpink;
-    transition: top 1s ease;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s; 
     display: none;
   }
 
-  nav .open-menu {
-    display: block;
-    color: whitesmoke;
-  }
-
-  nav .main-menu .close-menu {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    color: whitesmoke;
+  nav .main-menu li a {
   }
 
   nav .main-menu li a:hover {
     background: none;
-    color: hotpink; 
-    font-size: 1.6rem;
+    color: rgb(153, 0, 77);
   }
 
-  .icons i {
+  nav .burger {
+  position: fixed;
+  z-index: 100;
+  right: 1rem;
+  padding: 4px;
+  cursor: pointer;
+  }
+
+  nav .icons {
     display: inline-block;
     padding: 12px;
     color: whitesmoke;
   }
-} 
+
+}
+

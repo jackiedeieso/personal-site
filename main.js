@@ -1,15 +1,12 @@
-const mainMenu = document.querySelector('.main-menu');
-const closeMenu = document.querySelector('.close-menu');
-const openMenu = document.querySelector('.open-menu');
+burger.addEventListener("click", function() {
+	burger.classList.toggle("active")
+	});
 
-openMenu.addEventListener('click', show);
-closeMenu.addEventListener('click', close);
-
-function show() {
-	mainMenu.style.display = 'flex';
-	mainMenu.style.top = '0';
+nav .burger.active span:nth-child(2) {
+  transform: translateY(15px);
 }
 
-function close() {
-	mainMenu.style.top = '-100%'
+nav .burger.active span:nth-child(3) {
+  transform: translateY(60px);
 }
+
