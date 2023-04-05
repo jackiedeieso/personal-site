@@ -1,12 +1,9 @@
-burger.addEventListener("click", function() {
-	burger.classList.toggle("active")
-	});
+let burger = document.getElementById("burger");
+	let overlay = document.getElementById("nav");
 
-nav .burger.active span:nth-child(2) {
-  transform: translateY(15px);
+function onClick() {
+	burger.classList.toggle("active");
+	overlay.classList.toggle("drop-down");
 }
 
-nav .burger.active span:nth-child(3) {
-  transform: translateY(60px);
-}
-
+document.getElementById("burger").addEventListener("click", onClick);

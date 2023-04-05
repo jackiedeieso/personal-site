@@ -29,6 +29,10 @@ h1 {
   letter-spacing: 3px;
 }
 
+.active {
+  
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -64,7 +68,7 @@ nav .main-menu li a:hover {
   opacity: 75%;
 }
 
-nav .burger {
+nav #burger {
   display: flex;
   width: 50px;
   height: 50px;
@@ -78,7 +82,7 @@ nav .burger {
   transition-duration: 0.1s; 
 }
 
-nav .burger span {
+nav #burger span {
   position: absolute;
   transition: 0.5s;
   width: 27px;
@@ -88,15 +92,15 @@ nav .burger span {
   border-radius: 4px;
 }
 
-nav .burger span:nth-child(1) {
+nav #burger span:nth-child(1) {
   transform: translateY(-9px);
 }
 
-nav .burger span:nth-child(2) {
+nav #burger span:nth-child(2) {
   transform: translateY(9px);
 }
 
-nav .burger:hover {
+nav #burger:hover {
   box-shadow: 5px 5px 5px rgb(99, 99, 161);
 }
 
@@ -151,7 +155,7 @@ nav .icons {
     color: rgb(153, 0, 77);
   }
 
-  nav .burger {
+  nav #burger {
   position: fixed;
   z-index: 100;
   right: 1rem;
