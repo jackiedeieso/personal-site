@@ -6,4 +6,4 @@ function onClick() {
 	overlay.classList.toggle("drop-down");
 }
 
-document.getElementById("burger").addEventListener("click", onClick);
+burger.addEventListener("click", onClick);
